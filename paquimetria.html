@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquimetría</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Paquimetría</h1>
+
+        <img src="img/paquimetria.jpg" alt="Imagen de Paquimetría" class="imagen-estudio">
+
+        <div class="acordeon">
+            <button class="acordeon-titulo">¿Qué es? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>La paquimetría es un estudio que mide el grosor de la córnea.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Para qué sirve? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Se suele indicar antes de la realizacion de cirugías oculares y para diagnosticar enfermedades corneales. Tambien se utiliza para evaluar si la presión ocular medida es fiable ya que puede variar segun el espesor corneal.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>No requiere preparación especial. Si usás lentes de contacto, retirarlos unas horas antes del estudio.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Antes de realizar la medicion, el profesional colocara una gota de anestesia local en su ojo para evitar molestias y el parpadeo reflejo. Solo debés mantenerte quieto mientras acerca el equipo a tu ojo.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="boton-volver">← Volver al inicio</a>
+    </div>
+
+    <script>
+        const titulos = document.querySelectorAll('.acordeon-titulo');
+        titulos.forEach(titulo => {
+            titulo.addEventListener('click', () => {
+                titulo.classList.toggle('activo');
+                const contenido = titulo.nextElementSibling;
+                if (contenido.style.maxHeight) {
+                    contenido.style.maxHeight = null;
+                } else {
+                    contenido.style.maxHeight = contenido.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

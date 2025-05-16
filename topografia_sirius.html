@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topografía Sirius</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Topografía Sirius</h1>
+
+    <img src="img/topografia_sirius.jpg" alt="Imagen de Topografía Sirius" class="imagen-estudio"/>
+
+    <div class="acordeon">
+      <button class="acordeon-titulo">¿Qué es? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>La topografía Sirius es un estudio avanzado que combina análisis de la superficie corneal con tomografía del segmento anterior del ojo. Utiliza tecnología de disco de Plácido y cámara de Scheimpflug para obtener una imagen tridimensional detallada del ojo.</p>
+      </div>
+
+      <button class="acordeon-titulo">¿Para qué sirve? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>Se utiliza para estudiar la curvatura y el grosor corneal, evaluar queratoconos, planificar cirugías refractivas y cataratas, y analizar el ángulo iridocorneal. Es uno de los estudios más completos para valorar la salud del segmento anterior.</p>
+      </div>
+
+      <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>No requiere preparación especial. Si usás lentes de contacto debera suspender su uso 48hs antes del estudio.</p>
+      </div>
+
+      <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>Debés apoyar la frente y el mentón en el equipo, mantenerte quieto y mirar un punto fijo. El estudio es rápido e indoloro. Solo dura unos segundos por ojo.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="boton-volver">← Volver al inicio</a>
+  </div>
+
+  <script>
+    const titulos = document.querySelectorAll(".acordeon-titulo");
+    titulos.forEach((titulo) => {
+      titulo.addEventListener("click", () => {
+        titulo.classList.toggle("activo");
+        const contenido = titulo.nextElementSibling;
+        if (contenido.style.maxHeight) {
+          contenido.style.maxHeight = null;
+        } else {
+          contenido.style.maxHeight = contenido.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

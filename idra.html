@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDRA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IDRA</h1>
+
+        <img src="img/idra.jpg" alt="Imagen del estudio IDRA" class="imagen-estudio">
+
+        <div class="acordeon">
+            <button class="acordeon-titulo">¿Qué es? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>El estudio IDRA es un análisis completo de la superficie ocular que evalúa la calidad y cantidad de la lágrima, el estado de las glándulas de Meibomio, la estabilidad del film lagrimal y otros parámetros relacionados con el ojo seco.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Para qué sirve? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Sirve para diagnosticar el síndrome de ojo seco, evaluar su severidad y orientar el tratamiento más adecuado. También es útil para hacer seguimiento de pacientes con molestias oculares crónicas.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>No se requiere preparación. Se recomienda no aplicarse lágrimas artificiales ni cremas alrededor de los ojos al menos 2 horas antes del estudio para no alterar los resultados.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Debés mirar fijo a un punto dentro del equipo y mantenerte quieto. El estudio es cómodo, no produce molestias, y dura algunos minutos mientras se toman distintas mediciones.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="boton-volver">← Volver al inicio</a>
+    </div>
+
+    <script>
+        const titulos = document.querySelectorAll('.acordeon-titulo');
+        titulos.forEach(titulo => {
+            titulo.addEventListener('click', () => {
+                titulo.classList.toggle('activo');
+                const contenido = titulo.nextElementSibling;
+                if (contenido.style.maxHeight) {
+                    contenido.style.maxHeight = null;
+                } else {
+                    contenido.style.maxHeight = contenido.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

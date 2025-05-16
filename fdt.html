@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FDT</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>FDT</h1>
+    <img src="img/fdt.jpg" alt="Imagen del estudio FDT" class="imagen-estudio"/>
+
+    <div class="acordeon">
+      <button class="acordeon-titulo">¿Qué es? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>El FDT (Frequency Doubling Technology) es un tipo de campo visual automatizado que evalúa las fibras nerviosas de la retina mediante estímulos de contraste y frecuencia. Es rápido, confiable y de fácil interpretación.</p>
+      </div>
+
+      <button class="acordeon-titulo">¿Para qué sirve? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>Sirve para la detección temprana de glaucoma y otras enfermedades del nervio óptico. También es útil como test de screening en controles generales de salud visual.</p>
+      </div>
+
+      <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>No requiere preparación especial. No es necesario dilatar la pupila ni suspender medicación. El paciente debe acudir descansado.</p>
+      </div>
+
+      <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>Debés mirar un punto fijo en el centro del equipo y presionar un botón cada vez que percibas un estímulo visual. El estudio es breve y no genera molestias.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="boton-volver">← Volver al inicio</a>
+  </div>
+
+  <script>
+    const titulos = document.querySelectorAll(".acordeon-titulo");
+    titulos.forEach((titulo) => {
+      titulo.addEventListener("click", () => {
+        titulo.classList.toggle("activo");
+        const contenido = titulo.nextElementSibling;
+        if (contenido.style.maxHeight) {
+          contenido.style.maxHeight = null;
+        } else {
+          contenido.style.maxHeight = contenido.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

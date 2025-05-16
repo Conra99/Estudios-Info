@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuento Endotelial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recuento Endotelial</h1>
+
+        <img src="img/recuento.jpg" alt="Imagen del Recuento Endotelial" class="imagen-estudio">
+
+        <div class="acordeon">
+            <button class="acordeon-titulo">¿Qué es? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>El recuento endotelial es un estudio que permite evaluar y contar las células endoteliales de la córnea, responsables de mantener la transparencia corneal. Se realiza mediante una cámara especular, sin contacto.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Para qué sirve? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Es útil para controlar el estado de la córnea en enfermedades como distrofias endoteliales, después de cirugías oculares, en usuarios de lentes de contacto, y antes de procedimientos como implantes de lentes intraoculares.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>No requiere preparación especial. Es indoloro, rápido y no se utilizan gotas. No afecta la visión y podés continuar tu día normalmente luego del estudio.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Debés apoyar el mentón y la frente en el equipo, mirar fijo un punto de luz, y permanecer quieto durante unos segundos mientras se toma la imagen. Es un procedimiento muy breve y cómodo.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="boton-volver">← Volver al inicio</a>
+    </div>
+
+    <script>
+        const titulos = document.querySelectorAll('.acordeon-titulo');
+        titulos.forEach(titulo => {
+            titulo.addEventListener('click', () => {
+                titulo.classList.toggle('activo');
+                const contenido = titulo.nextElementSibling;
+                if (contenido.style.maxHeight) {
+                    contenido.style.maxHeight = null;
+                } else {
+                    contenido.style.maxHeight = contenido.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

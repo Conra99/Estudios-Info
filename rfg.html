@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angiografía / RFG</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Angiografía / RFG</h1>
+
+        <img src="img/rfg.jpg" alt="Imagen de Retinofluoresceinografía" class="imagen-estudio">
+
+        <div class="acordeon">
+            <button class="acordeon-titulo">¿Qué es? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>La retinofluoresceinografía (RFG) o angiografía fluoresceínica es un estudio que permite visualizar los vasos sanguíneos de la retina mediante la inyección de un colorante (fluoresceína) y la toma de fotografías especiales.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Para qué sirve? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Se utiliza para detectar filtraciones, obstrucciones o alteraciones en los vasos de la retina, siendo fundamental en el diagnóstico de enfermedades como retinopatía diabética, degeneración macular, oclusiones venosas y otras patologías vasculares retinianas.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Se requiere dilatar las pupilas con gotas. Además, se inyecta un colorante en una vena del brazo, por lo que es importante informar si tenés alergias, antecedentes médicos importantes o estás embarazada.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Durante el estudio, debes mantenerte inmóvil y fijar la mirada en el punto que te indique el profesional mientras se adquieren las imágenes. La inyección puede provocar una sensación leve de calor o náusea momentánea, y tras el procedimiento es posible que la piel y la orina adquieran un ligero tono amarillento durante unas horas.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="boton-volver">← Volver al inicio</a>
+    </div>
+
+    <script>
+        const titulos = document.querySelectorAll('.acordeon-titulo');
+        titulos.forEach(titulo => {
+            titulo.addEventListener('click', () => {
+                titulo.classList.toggle('activo');
+                const contenido = titulo.nextElementSibling;
+                if (contenido.style.maxHeight) {
+                    contenido.style.maxHeight = null;
+                } else {
+                    contenido.style.maxHeight = contenido.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

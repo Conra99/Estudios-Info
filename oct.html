@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomografía de Coherencia Óptica (OCT)</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tomografía de Coherencia Óptica (OCT)</h1>
+
+        <img src="img/oct.jpg" alt="Imagen del estudio OCT" class="imagen-estudio">
+
+        <div class="acordeon">
+            <button class="acordeon-titulo">¿Qué es el OCT Cirrus? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>El OCT Cirrus es un equipo de última generación que utiliza luz láser para obtener imágenes detalladas en alta resolución de la retina y el nervio óptico. Permite cortes transversales precisos, similares a una "tomografía" del ojo.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Para qué sirve el OCT Cirrus? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Sirve para diagnosticar y hacer seguimiento de enfermedades de la retina como degeneración macular, edema macular, retinopatía diabética y también patologías del nervio óptico como el glaucoma.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué es el OCT Visante? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>El OCT Visante está diseñado especialmente para estudiar estructuras anteriores del ojo como la córnea, el ángulo iridocorneal y el cristalino. Es ideal para análisis prequirúrgico y seguimiento en enfermedades corneales o del segmento anterior.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Para qué sirve el OCT Visante? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Se utiliza para evaluar el grosor corneal, la forma del ángulo del ojo, la cámara anterior y para planificación de cirugías de glaucoma, implantes de lentes fáquicos o estudios de queratocono y otras enfermedades corneales.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>No requieren preparación especial. Son estudios no invasivo, indoloros y sin contacto. En algunos casos, el médico puede indicar dilatar la pupila si es necesario obtener imágenes más precisas.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Deberás apoyar la frente y el mentón sobre el equipo, mantenerte quieto y mirar a un punto de luz. El estudio es breve y no genera molestias. Es importante parpadear lo menos posible mientras se toman las imágenes.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="boton-volver">← Volver al inicio</a>
+    </div>
+
+    <script>
+        const titulos = document.querySelectorAll('.acordeon-titulo');
+        titulos.forEach(titulo => {
+            titulo.addEventListener('click', () => {
+                titulo.classList.toggle('activo');
+                const contenido = titulo.nextElementSibling;
+                if (contenido.style.maxHeight) {
+                    contenido.style.maxHeight = null;
+                } else {
+                    contenido.style.maxHeight = contenido.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

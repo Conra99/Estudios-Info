@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curva Tensional</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Curva Tensional</h1>
+    <img src="img/curva_tensional.jpg" alt="Imagen de Curva Tensional" class="imagen-estudio"/>
+
+    <div class="acordeon">
+      <button class="acordeon-titulo">¿Qué es? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>La curva tensional es un estudio que evalúa la variación de la presión intraocular (PIO) a lo largo del tiempo. Se realiza con una sobrecarga hídrica (ingesta de líquidos) para observar la respuesta del sistema de drenaje ocular.</p>
+      </div>
+
+      <button class="acordeon-titulo">¿Para qué sirve? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>Se utiliza para detectar picos de presión ocular que podrían pasar desapercibidos en una medición aislada. Es útil para el diagnóstico y seguimiento del glaucoma o hipertensión ocular.</p>
+      </div>
+
+      <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>Para el estudio, es fundamental acudir en ayunas. Además, no podrá orinar una hora antes de iniciarse ni durante la prueba. Por favor, traiga un litro de agua, que deberá beberse a lo largo de la realización del estudio.</p>
+      </div>
+
+      <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+      <div class="acordeon-contenido">
+        <p>Debe asistir a la hora del turno. Se le realizara una primera medida de la presion intraocular al llegar, luego saldra a la sala de espera y bebera el litro de agua que usted trajo en aproximadamente 15 a 20 minutos. Finalmente, se le realizaran 4 tomas mas de la presion intraocular separadas de 15 minutos. </p>
+      </div>
+    </div>
+
+    <a href="index.html" class="boton-volver">← Volver al inicio</a>
+  </div>
+
+  <script>
+    const titulos = document.querySelectorAll(".acordeon-titulo");
+    titulos.forEach((titulo) => {
+      titulo.addEventListener("click", () => {
+        titulo.classList.toggle("activo");
+        const contenido = titulo.nextElementSibling;
+        if (contenido.style.maxHeight) {
+          contenido.style.maxHeight = null;
+        } else {
+          contenido.style.maxHeight = contenido.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retinografía</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Retinografía</h1>
+
+        <img src="img/rfg.jpg" alt="Imagen de Retinografía" class="imagen-estudio">
+
+        <div class="acordeon">
+            <button class="acordeon-titulo">¿Qué es? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>La retinografía es una fotografía del fondo del ojo que permite visualizar en detalle la retina, el nervio óptico y la mácula. Se realiza con dilatación pupilar para obtener una imagen más completa.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Para qué sirve? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Se utiliza para detectar y controlar enfermedades como retinopatía diabética, hipertensiva, degeneración macular, trombosis y otras patologías de la retina. También es útil para seguimiento en controles oftalmológicos.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Generalmente se requiere la aplicación de gotas para dilatar las pupilas. Esto puede generar visión borrosa por algunas horas, por lo que se recomienda venir acompañado y no manejar luego del estudio.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Durante el estudio deberás apoyar la cabeza en el equipo y mirar a un punto que le indicara el profesional. La imagen se toma en segundos, y puede producir un pequeño destello de luz.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="boton-volver">← Volver al inicio</a>
+    </div>
+
+    <script>
+        const titulos = document.querySelectorAll('.acordeon-titulo');
+        titulos.forEach(titulo => {
+            titulo.addEventListener('click', () => {
+                titulo.classList.toggle('activo');
+                const contenido = titulo.nextElementSibling;
+                if (contenido.style.maxHeight) {
+                    contenido.style.maxHeight = null;
+                } else {
+                    contenido.style.maxHeight = contenido.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecografía Ocular</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ecografía Ocular</h1>
+
+        <img src="img/ecografia.jpg" alt="Imagen de Ecografía Ocular" class="imagen-estudio">
+
+        <div class="acordeon">
+            <button class="acordeon-titulo">¿Qué es? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>La ecografía ocular es un estudio por ultrasonido que permite visualizar el interior del ojo y estructuras orbitarias, especialmente cuando no se puede observar directamente debido a opacidades oculares.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Para qué sirve? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Se utiliza para detectar desprendimientos de retina, tumores intraoculares, hemorragias vítreas, cuerpos extraños, lesiones del nervio óptico y evaluar la anatomía ocular cuando no es posible ver el fondo de ojo.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>No requiere preparación previa. Es un procedimiento seguro e indoloro. No se aplican gotas, y no afecta la visión posteriormente.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Debés cerrar los ojos mientras el profesional aplica un gel sobre los párpados y desliza una sonda suavemente. Es importante mantenerte relajado y no abrir los ojos durante la exploración.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="boton-volver">← Volver al inicio</a>
+    </div>
+
+    <script>
+        const titulos = document.querySelectorAll('.acordeon-titulo');
+        titulos.forEach(titulo => {
+            titulo.addEventListener('click', () => {
+                titulo.classList.toggle('activo');
+                const contenido = titulo.nextElementSibling;
+                if (contenido.style.maxHeight) {
+                    contenido.style.maxHeight = null;
+                } else {
+                    contenido.style.maxHeight = contenido.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retinografía EIDON</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Retinografía EIDON</h1>
+
+        <img src="img/eidon.jpg" alt="Imagen de Retinografía EIDON" class="imagen-estudio">
+
+        <div class="acordeon">
+            <button class="acordeon-titulo">¿Qué es? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>La retinografía con EIDON es una imagen digital de alta resolución del fondo de ojo, obtenida sin necesidad de dilatar las pupilas. Utiliza tecnología confocal que permite captar detalles finos de la retina, mácula y nervio óptico.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Para qué sirve? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Permite detectar y documentar enfermedades como retinopatía diabética, degeneración macular, alteraciones del nervio óptico y otras patologías de la retina. También se utiliza para seguimiento en controles oftalmológicos rutinarios.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué preparación necesita? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>No requiere dilatación pupilar ni preparación previa. Es un estudio rápido, no invasivo y no molesto para el paciente.</p>
+            </div>
+
+            <button class="acordeon-titulo">¿Qué debo hacer durante el estudio? <span class="flecha">▼</span></button>
+            <div class="acordeon-contenido">
+                <p>Solo debés mirar un punto fijo dentro del equipo mientras se toma la imagen. Es importante no mover la cabeza ni parpadear en ese momento. La toma dura apenas unos segundos.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="boton-volver">← Volver al inicio</a>
+    </div>
+
+    <script>
+        const titulos = document.querySelectorAll('.acordeon-titulo');
+        titulos.forEach(titulo => {
+            titulo.addEventListener('click', () => {
+                titulo.classList.toggle('activo');
+                const contenido = titulo.nextElementSibling;
+                if (contenido.style.maxHeight) {
+                    contenido.style.maxHeight = null;
+                } else {
+                    contenido.style.maxHeight = contenido.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
